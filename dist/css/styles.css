@@ -166,3 +166,43 @@ body{
     border-radius: 5px;
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);
 }
+
+.summary-main-heading{
+    font-family: "Roboto", sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+}
+.transaction-green{
+    color: green;
+}
+.transaction-red{
+    color: red;
+}
+.transactions-seeMore{
+    color: grey;
+}
+.transactions-seeMore:hover{
+    color: rgb(108, 105, 105);
+    cursor: pointer;
+}
+
+.summary-data p{
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 0px;
+}
+.summary-data-red{
+    font-family: "Roboto", sans-serif;
+    color: red;
+    font-size: 18px;
+}
+.summary-data-black{
+    font-family: "Roboto", sans-serif;
+    color: red;
+    font-size: 18px;
+}
+.light-hr{
+    color: black;
+    margin-top: 0px;
+}
