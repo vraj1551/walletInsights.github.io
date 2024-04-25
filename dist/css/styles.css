@@ -108,6 +108,9 @@ body{
 .payment-method{
     width: 120% !important;
 }
+.form-div{
+    width: 60% !important;
+}
 
 /* .method{
     width: 40% !important; 
@@ -156,4 +159,10 @@ body{
 }
 .date-emi{
     width: 100% !important;
+}
+
+.transactions{
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);
 }

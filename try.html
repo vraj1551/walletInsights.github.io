@@ -6,36 +6,284 @@
     <title>Wallet Insights</title>
     <link rel="stylesheet" href="dist/css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <div class="d-flex w-100 bg-primary justify-content-center align-items-center">
-        <div class="w-50 bg-warning">
-            <button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
-            <button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
-            <button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
-            <button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
-        
-            <div id="Home" class="tabcontent">
-            <h3>Home</h3>
-            <p>Home is where the heart is..</p>
+    <main id="mainpg">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid w-75 d-flex justify-content-between">
+                <div>
+                    <a class="navbar-brand" href="#">Wallet <span>Insights</span><span class="span2">  .</span></a>
+                </div>
+                <div class="navbar-nav">
+                <a class="nav-link" aria-current="page" href="#">Generate Report</a>
+                <a class="nav-link" href="#">Log Out</a>
+                </div>
             </div>
-        
-            <div id="News" class="tabcontent">
-            <h3>News</h3>
-            <p>Some news this fine day!</p>
-            </div>
-        
-            <div id="Contact" class="tabcontent">
-            <h3>Contact</h3>
-            <p>Get in touch, or swing by for a cup of coffee.</p>
-            </div>
-        
-            <div id="About" class="tabcontent">
-            <h3>About</h3>
-            <p>Who we are and what we do.</p>
+        </nav>
+
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="w-75 justify-content-center mt-3">
+                <div class="hero-balance">
+                    <h1>Total Balance:</h1>
+                    <span>₹ 30,000</span>
+                </div>
             </div>
         </div>
-    </div>
+
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="w-75 d-flex flex-row justify-content-between mt-2">
+
+                <div class="col-7">
+                    <!-- Add Transaction Block -->
+                    <div class="mt-4 add-transaction col-12">
+                        <p>New Transaction:</p>
+                        <div class="tabbing">
+                            <div class="d-flex pb-4">
+                                <button class="tablink tablink-expense" onclick="openPage('Home', this, '#ffb3b2')">Add Expense</button>
+                                <button class="tablink tabline-income" onclick="openPage('News', this, '#b7e4c7')" id="defaultOpen">Add Income</button>
+                                <button class="tablink tabline-split" onclick="openPage('Contact', this, '#fff6cc')" id="defaultOpen">Split</button>
+                            </div>
+    
+                            <div id="Home" class="tabcontent">
+                                <form action="">
+                                    <div class="row d-flex justify-content-between">
+                                        <div class="col-6">
+                                            <select class="form-select category" aria-label="Default select example">
+                                                <option selected>Select Category</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group flex-nowrap col-2">
+                                            <span class="input-group-text " id="addon-wrapping">INR</span>
+                                            <input type="number" class="form-control amount" placeholder="Amount" aria-label="Username" aria-describedby="addon-wrapping">
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-between mt-4">
+                                        <div class="col-6">
+                                            <input class="form-control note" type="text" placeholder="Add Note" aria-label="default input example">
+                                        </div>
+                                        <div class="input-group flex-nowrap col-2">
+                                            <input class="form-control date" type="date" placeholder="" aria-label="default input example">
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-between mt-4">
+                                        <div class="method col-6">
+                                            <select class="form-select payment-method" aria-label="Default select example">
+                                                <option selected>Payment Method</option>
+                                                <option value="1">UPI</option>
+                                                <option value="2">Cash</option>
+                                                <option value="2">Bank Transfer</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group  d-flex justify-content-between">
+                                            <input type="reset" class="btn-secondary" value="Cancel"> 
+                                            <input type="submit" class="btn-primary" value="Add">
+                                        </div>
+                                    </div>
+                                </form>
+                            <!-- <h3>Home</h3>
+                            <p>Home is where the heart is..</p> -->
+                            </div>
+    
+                            <div id="News" class="tabcontent">
+                                <form action="">
+                                    <div class="row d-flex justify-content-between">
+                                        <div class="col-6">
+                                            <select class="form-select category" aria-label="Default select example">
+                                                <option selected>Select Category</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group flex-nowrap col-2">
+                                            <span class="input-group-text " id="addon-wrapping">INR</span>
+                                            <input type="number" class="form-control amount" placeholder="Amount" aria-label="Username" aria-describedby="addon-wrapping">
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-between mt-4">
+                                        <div class="col-6">
+                                            <input class="form-control note" type="text" placeholder="Add Note" aria-label="default input example">
+                                        </div>
+                                        <div class="input-group flex-nowrap col-2">
+                                            <input class="form-control date" type="date" placeholder="" aria-label="default input example">
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-between mt-4">
+                                        <div class="method col-6">
+                                            <select class="form-select payment-method" aria-label="Default select example">
+                                                <option selected>Payment Method</option>
+                                                <option value="1">Cash</option>
+                                                <option value="2">UPI</option>
+                                                <option value="2">Bank Transfer</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group  d-flex justify-content-between">
+                                            <input type="reset" class="btn-secondary" value="Cancel"> 
+                                            <input type="submit" class="btn-primary" value="Add">
+                                        </div>
+                                    </div>
+                                </form>
+                            <!-- <h3>News</h3>
+                            <p>Some news this fine day!</p> -->
+                            </div>
+    
+                            <div id="Contact" class="tabcontent">
+                                <form action="">
+                                    <div class="row d-flex justify-content-between">
+                                        <div class="col-6">
+                                            <select class="form-select category" aria-label="Default select example">
+                                                <option selected>Select Category</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group flex-nowrap col-2">
+                                            <span class="input-group-text " id="addon-wrapping">INR</span>
+                                            <input type="number" class="form-control amount" placeholder="Amount" aria-label="Username" aria-describedby="addon-wrapping">
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-between mt-4">
+                                        <div class="col-6">
+                                            <input class="form-control note" type="text" placeholder="Add Note" aria-label="default input example">
+                                        </div>
+                                        <div class="input-group flex-nowrap col-2">
+                                            <input class="form-control date" type="date" placeholder="" aria-label="default input example">
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-between mt-4">
+                                        <div class="method col-6">
+                                            <select class="form-select payment-method" aria-label="Default select example">
+                                                <option selected>Splitting Options</option>
+                                                <option value="1">Split Equally</option>
+                                                <option value="2">I owe them</option>
+                                                <option value="2">They owe me</option>
+                                            </select>
+                                        </div>
+                                        <div class="input-group  d-flex justify-content-between">
+                                            <input type="reset" class="btn-secondary" value="Cancel"> 
+                                            <input type="submit" class="btn-primary" value="Add">
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-between mt-4">
+                                        <div class="method col-6">
+                                            <select class="form-select payment-method" aria-label="Default select example">
+                                                <option selected>Split With</option>
+                                                <option value="1">Vedant</option>
+                                                <option value="2">Vraj </option>
+                                                <option value="2">Vaidik</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Saving Calculator -->
+                    <div class="mt-4 add-transaction col-12">
+                        <div class="d-flex col-12 justify-content-start">
+                            <div class="mb-2 ms-2">
+                                <button class="tablink tablink-saving heading-btn" onclick="openPage('Saving', this, '')"><i class="fa-solid fa-caret-down me-1"></i> Saving Calculator</button>
+                            </div>
+                        </div>
+                        <div class="tabbing">
+    
+                            <div id="Saving" class="tabcontent">
+                                <form action="">
+                                    <div class="row d-flex justify-content-between">
+                                        <div class="input-group flex-nowrap col-6 w-50">
+                                            <span class="input-group-text " id="addon-wrapping">INR</span>
+                                            <input type="number" class="form-control saving-amount" placeholder="Amount" aria-label="Username" aria-describedby="addon-wrapping">
+                                        </div>
+                                        <div class="input-group flex-nowrap col-2">
+                                            <input class="form-control date" type="date" placeholder="" aria-label="default input example">
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-between mt-4">
+                                        <div class="col-5">
+                                            <input class="form-control note" type="text" placeholder="Total Amount Will Be" aria-label="disabled input example" disabled>
+                                        </div>
+                                        <div class="input-group  d-flex justify-content-between">
+                                            <input type="reset" class="btn-secondary" value="Cancel"> 
+                                            <input type="submit" class="btn-primary" value="Calculate">
+                                        </div>
+                                    </div>
+                                </form>
+                            <!-- <h3>Home</h3>
+                            <p>Home is where the heart is..</p> -->
+                            </div>
+    
+                        </div>
+                    </div>
+    
+                    <!-- EMI Calculator -->
+                    <div class="mt-4 add-transaction col-12">
+                        <div class="d-flex col-12 justify-content-start">
+                            <div class="mb-2 ms-2">
+                                <button class="tablink tablink-saving heading-btn" onclick="openPage('Emi', this, '')"><i class="fa-solid fa-caret-down me-1"></i> EMI Calculator</button>
+                            </div>
+                        </div>
+                        <div class="tabbing">
+    
+                            <div id="Emi" class="tabcontent">
+                                <form action="">
+                                    <div class="row d-flex justify-content-between">
+                                        <div class="input-group flex-nowrap col-2 w-50">
+                                            <span class="input-group-text " id="addon-wrapping">INR</span>
+                                            <input type="number" class="form-control principle-amount" placeholder="Principle Amount" aria-label="Username" aria-describedby="addon-wrapping">
+                                        </div>
+                                        <div class="input-group flex-nowrap col-2 w-50">
+                                            <span class="input-group-text " id="addon-wrapping">%</span>
+                                            <input type="number" class="form-control saving-amount" placeholder="Interest" aria-label="Username" aria-describedby="addon-wrapping">
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-between mt-4">
+                                        <div class="input-group flex-nowrap w-50">
+                                            <input class="form-control date-emi" type="date" placeholder="" aria-label="default input example">
+                                        </div>
+                                        <div class="input-group w-50 d-flex justify-content-between">
+                                            <input type="reset" class="btn-secondary" value="Cancel"> 
+                                            <input type="submit" class="btn-primary" value="Calculate">
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-between mt-4">
+                                        <div class="col-5">
+                                            <input class="form-control note" type="text" placeholder="Total Amount Will Be" aria-label="disabled input example" disabled>
+                                        </div>
+                                    </div>
+                                </form>
+                            <!-- <h3>Home</h3>
+                            <p>Home is where the heart is..</p> -->
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4 transactions mt-3">
+                    <h1>Hello</h1>
+                    <h1>Hello</h1>
+                    <h1>Hello</h1>
+                    <h1>Hello</h1>
+                    <h1>Hello</h1>
+                    <h1>Hello</h1>
+                    <h1>Hello</h1>
+                    <h1>Hello</h1>
+                    <h1>Hello</h1>
+                    <h1>Hello</h1>
+                    <h1>Hello</h1>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
 
 
     <script src="dist/js/script.js"></script>
