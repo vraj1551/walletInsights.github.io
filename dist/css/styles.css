@@ -17,7 +17,7 @@ body{
     padding-top: 7px;
     padding-bottom: 7px;
     margin-top: 12px;
-    background-color: #3f51b5;
+    background-color: #0f2b49;
     border-radius: 5px;
 }
 
@@ -165,6 +165,7 @@ body{
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);
+    height: fit-content;
 }
 
 .summary-main-heading{
@@ -172,16 +173,27 @@ body{
     font-size: 26px;
     font-weight: 500;
 }
-.transaction-green{
+.transaction-heading{
+    margin-top: 20px !important;
+
+}
+.transaction-green p{
     color: green;
+    font-size: 17px;
+    font-family: "Roboto", sans-serif;
 }
-.transaction-red{
+.transaction-red p{
     color: red;
+    font-size: 17px;
+    font-family: "Roboto", sans-serif;
 }
-.transactions-seeMore{
-    color: grey;
+.transactions-seeMore a{
+    color: grey ;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "Roboto", sans-serif;
 }
-.transactions-seeMore:hover{
+.transactions-seeMore a:hover{
     color: rgb(108, 105, 105);
     cursor: pointer;
 }
@@ -197,9 +209,14 @@ body{
     color: red;
     font-size: 18px;
 }
+.summary-data-green{
+    font-family: "Roboto", sans-serif;
+    color: green;
+    font-size: 18px;
+}
 .summary-data-black{
     font-family: "Roboto", sans-serif;
-    color: red;
+    color: black;
     font-size: 18px;
 }
 .light-hr{

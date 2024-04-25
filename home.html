@@ -22,17 +22,25 @@
                 </div>
             </div>
         </nav>
-        <div class="w-100 d-flex justify-content-center align-items-center">
-            <div class="w-75  justify-content-center mt-3">
+
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="w-75 justify-content-center mt-3">
                 <div class="hero-balance">
                     <h1>Total Balance:</h1>
                     <span>₹ 30,000</span>
                 </div>
-                <div class="d-flex">
-                    <div class="mt-4 add-transaction col-7">
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="w-75 d-flex flex-row justify-content-between mt-2">
+
+                <div class="col-7">
+                    <!-- Add Transaction Block -->
+                    <div class="mt-4 add-transaction col-12">
                         <p>New Transaction:</p>
                         <div class="tabbing">
-                            <div class="d-flex mb-4">
+                            <div class="d-flex pb-4">
                                 <button class="tablink tablink-expense" onclick="openPage('Home', this, '#ffb3b2')">Add Expense</button>
                                 <button class="tablink tabline-income" onclick="openPage('News', this, '#b7e4c7')" id="defaultOpen">Add Income</button>
                                 <button class="tablink tabline-split" onclick="openPage('Contact', this, '#fff6cc')" id="defaultOpen">Split</button>
@@ -176,91 +184,227 @@
                             </div>
                         </div>
                     </div>
+    
+                    <!-- Saving Calculator -->
+                    <div class="mt-4 add-transaction col-12">
+                        <div class="d-flex col-12 justify-content-start">
+                            <div class="mb-2 ms-2">
+                                <button class="tablink tablink-saving heading-btn" onclick="openPage('Saving', this, '')"><i class="fa-solid fa-caret-down me-1"></i> Saving Calculator</button>
+                            </div>
+                        </div>
+                        <div class="tabbing">
+    
+                            <div id="Saving" class="tabcontent">
+                                <form action="">
+                                    <div class="row d-flex justify-content-between">
+                                        <div class="input-group flex-nowrap col-6 w-50">
+                                            <span class="input-group-text " id="addon-wrapping">INR</span>
+                                            <input type="number" class="form-control saving-amount" placeholder="Amount" aria-label="Username" aria-describedby="addon-wrapping">
+                                        </div>
+                                        <div class="input-group flex-nowrap col-2">
+                                            <input class="form-control date" type="date" placeholder="" aria-label="default input example">
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-between mt-4">
+                                        <div class="col-5">
+                                            <input class="form-control note" type="text" placeholder="Total Amount Will Be" aria-label="disabled input example" disabled>
+                                        </div>
+                                        <div class="input-group  d-flex justify-content-between">
+                                            <input type="reset" class="btn-secondary" value="Cancel"> 
+                                            <input type="submit" class="btn-primary" value="Calculate">
+                                        </div>
+                                    </div>
+                                </form>
+                            <!-- <h3>Home</h3>
+                            <p>Home is where the heart is..</p> -->
+                            </div>
+    
+                        </div>
+                    </div>
+    
+                    <!-- EMI Calculator -->
+                    <div class="mt-4 add-transaction col-12">
+                        <div class="d-flex col-12 justify-content-start">
+                            <div class="mb-2 ms-2">
+                                <button class="tablink tablink-saving heading-btn" onclick="openPage('Emi', this, '')"><i class="fa-solid fa-caret-down me-1"></i> EMI Calculator</button>
+                            </div>
+                        </div>
+                        <div class="tabbing">
+    
+                            <div id="Emi" class="tabcontent">
+                                <form action="">
+                                    <div class="row d-flex justify-content-between">
+                                        <div class="input-group flex-nowrap col-2 w-50">
+                                            <span class="input-group-text " id="addon-wrapping">INR</span>
+                                            <input type="number" class="form-control principle-amount" placeholder="Principle Amount" aria-label="Username" aria-describedby="addon-wrapping">
+                                        </div>
+                                        <div class="input-group flex-nowrap col-2 w-50">
+                                            <span class="input-group-text " id="addon-wrapping">%</span>
+                                            <input type="number" class="form-control saving-amount" placeholder="Interest" aria-label="Username" aria-describedby="addon-wrapping">
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-between mt-4">
+                                        <div class="input-group flex-nowrap w-50">
+                                            <input class="form-control date-emi" type="date" placeholder="" aria-label="default input example">
+                                        </div>
+                                        <div class="input-group w-50 d-flex justify-content-between">
+                                            <input type="reset" class="btn-secondary" value="Cancel"> 
+                                            <input type="submit" class="btn-primary" value="Calculate">
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-between mt-4">
+                                        <div class="col-5">
+                                            <input class="form-control note" type="text" placeholder="Total Amount Will Be" aria-label="disabled input example" disabled>
+                                        </div>
+                                    </div>
+                                </form>
+                            <!-- <h3>Home</h3>
+                            <p>Home is where the heart is..</p> -->
+                            </div>
+    
+                        </div>
+                    </div>
+                    <div class="add-transaction mt-4 col-12">
+                        <p class="transaction-heading mb-2 ms-4 mt-1">Recent Transactions</p>
+                        <div class="mt-3 transaction-green d-flex justify-content-between me-4">
+                            <p>24/04/2024</p>
+                            <p>Lunch Canteen</p>
+                            <p>This is a note</p>
+                            <p>Rs. 80</p>
+                        </div>
+                        <div class="transaction-red d-flex justify-content-between me-4">
+                            <p>24/04/2024</p>
+                            <p>Lunch Canteen</p>
+                            <p>This is a note</p>
+                            <p>Rs. 80</p>
+                        </div>
+                        <div class="transaction-red d-flex justify-content-between me-4">
+                            <p>24/04/2024</p>
+                            <p>Lunch Canteen</p>
+                            <p>This is a note</p>
+                            <p>Rs. 80</p>
+                        </div>
+                        <div class="transaction-green d-flex justify-content-between me-4">
+                            <p>24/04/2024</p>
+                            <p>Lunch Canteen</p>
+                            <p>This is a note</p>
+                            <p>Rs. 80</p>
+                        </div>
+                        <div class="transaction-green d-flex justify-content-between me-4">
+                            <p>24/04/2024</p>
+                            <p>Lunch Canteen</p>
+                            <p>This is a note</p>
+                            <p>Rs. 80</p>
+                        </div>
+                        <div class="transactions-seeMore d-flex justify-content-end me-4">
+                            <a href="" class="mb-3">See More</a>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Saving Calculator -->
-                <div class="mt-4 add-transaction col-7">
-                    <div class="d-flex col-12 justify-content-start">
-                        <div class="mb-2 ms-2">
-                            <button class="tablink tablink-saving heading-btn" onclick="openPage('Saving', this, '')"><i class="fa-solid fa-caret-down me-1"></i> Saving Calculator</button>
+                
+                <div class="col-4 transactions mt-4">
+                    <div class="summary mt-3 ms-4">
+                        <span class="summary-main-heading">Expense Summary</span>
+                        <div class="summary-data d-flex justify-content-between me-3 mt-1">
+                            <p>Cash used</p>
+                            <span class="summary-data-red">Rs. 7899</span>
+                        </div>
+                        <div class="summary-data d-flex justify-content-between me-3">
+                            <p>UPI used</p>
+                            <span class="summary-data-red">Rs. 7899</span>
+                        </div>
+                        <div class="summary-data d-flex justify-content-between me-3">
+                            <p>Bank Transfer</p>
+                            <span class="summary-data-red">Rs. 7899</span>
+                        </div>
+                        <hr class="light-hr me-3">
+                        <div class="summary-data d-flex justify-content-between me-3">
+                            <p>Total</p>
+                            <span class="summary-data-black">Rs. 23000</span>
                         </div>
                     </div>
-                    <div class="tabbing">
-
-                        <div id="Saving" class="tabcontent">
-                            <form action="">
-                                <div class="row d-flex justify-content-between">
-                                    <div class="input-group flex-nowrap col-6 w-50">
-                                        <span class="input-group-text " id="addon-wrapping">INR</span>
-                                        <input type="number" class="form-control saving-amount" placeholder="Amount" aria-label="Username" aria-describedby="addon-wrapping">
-                                    </div>
-                                    <div class="input-group flex-nowrap col-2">
-                                        <input class="form-control date" type="date" placeholder="" aria-label="default input example">
-                                    </div>
-                                </div>
-                                <div class="row d-flex justify-content-between mt-4">
-                                    <div class="col-5">
-                                        <input class="form-control note" type="text" placeholder="Total Amount Will Be" aria-label="disabled input example" disabled>
-                                    </div>
-                                    <div class="input-group  d-flex justify-content-between">
-                                        <input type="reset" class="btn-secondary" value="Cancel"> 
-                                        <input type="submit" class="btn-primary" value="Calculate">
-                                    </div>
-                                </div>
-                            </form>
-                        <!-- <h3>Home</h3>
-                        <p>Home is where the heart is..</p> -->
+                    <div class="summary mt-3 ms-4">
+                        <span class="summary-main-heading">Income Summary</span>
+                        <div class="summary-data d-flex justify-content-between me-3 mt-1">
+                            <p>Cash used</p>
+                            <span class="summary-data-green">Rs. 7899</span>
                         </div>
-
+                        <div class="summary-data d-flex justify-content-between me-3">
+                            <p>UPI used</p>
+                            <span class="summary-data-green">Rs. 7899</span>
+                        </div>
+                        <div class="summary-data d-flex justify-content-between me-3">
+                            <p>Bank Transfer</p>
+                            <span class="summary-data-green">Rs. 7899</span>
+                        </div>
+                        <hr class="light-hr me-3">
+                        <div class="summary-data d-flex justify-content-between me-3">
+                            <p>Total</p>
+                            <span class="summary-data-black">Rs. 23000</span>
+                        </div>
+                        
                     </div>
+                    <!-- <div class="mt-3 ms-4">
+                        <span class="summary-main-heading">Recent Transactions</span>
+                        <div class="mt-3 transaction-green d-flex justify-content-between me-3">
+                            <p>24/04/2024</p>
+                            <p>Lunch Canteen</p>
+                            <p>Rs. 80</p>
+                        </div>
+                        <div class="transaction-red d-flex justify-content-between me-3">
+                            <p>24/04/2024</p>
+                            <p>Lunch Canteen</p>
+                            <p>Rs. 80</p>
+                        </div>
+                        <div class="transaction-red d-flex justify-content-between me-3">
+                            <p>24/04/2024</p>
+                            <p>Lunch Canteen</p>
+                            <p>Rs. 80</p>
+                        </div>
+                        <div class="transaction-red d-flex justify-content-between me-3">
+                            <p>24/04/2024</p>
+                            <p>Lunch Canteen</p>
+                            <p>Rs. 80</p>
+                        </div>
+                        <div class="transaction-green d-flex justify-content-between me-3">
+                            <p>24/04/2024</p>
+                            <p>Lunch Canteen</p>
+                            <p>Rs. 80</p>
+                        </div>
+                        <div class="transaction-green d-flex justify-content-between me-3">
+                            <p>24/04/2024</p>
+                            <p>Lunch Canteen</p>
+                            <p>Rs. 80</p>
+                        </div>
+                        <div class="transaction-green d-flex justify-content-between me-3">
+                            <p>24/04/2024</p>
+                            <p>Lunch Canteen</p>
+                            <p>Rs. 80</p>
+                        </div>
+                        <div class="transaction-red d-flex justify-content-between me-3">
+                            <p>24/04/2024</p>
+                            <p>Lunch Canteen</p>
+                            <p>Rs. 80</p>
+                        </div>
+                        <div class="transaction-red d-flex justify-content-between me-3">
+                            <p>24/04/2024</p>
+                            <p>Lunch Canteen</p>
+                            <p>Rs. 80</p>
+                        </div>
+                        <div class="transaction-red d-flex justify-content-between me-3">
+                            <p>24/04/2024</p>
+                            <p>Lunch Canteen</p>
+                            <p>Rs. 80</p>
+                        </div>
+                        <div class="transactions-seeMore d-flex justify-content-end me-3">
+                            <p>See More</p>
+                        </div>
+                    </div> -->
                 </div>
 
-
-                <!-- EMI Calculator -->
-                <div class="mt-4 add-transaction col-7">
-                    <div class="d-flex col-12 justify-content-start">
-                        <div class="mb-2 ms-2">
-                            <button class="tablink tablink-saving heading-btn" onclick="openPage('Emi', this, '')"><i class="fa-solid fa-caret-down me-1"></i> EMI Calculator</button>
-                        </div>
-                    </div>
-                    <div class="tabbing">
-
-                        <div id="Emi" class="tabcontent">
-                            <form action="">
-                                <div class="row d-flex justify-content-between">
-                                    <div class="input-group flex-nowrap col-2 w-50">
-                                        <span class="input-group-text " id="addon-wrapping">INR</span>
-                                        <input type="number" class="form-control principle-amount" placeholder="Principle Amount" aria-label="Username" aria-describedby="addon-wrapping">
-                                    </div>
-                                    <div class="input-group flex-nowrap col-2 w-50">
-                                        <span class="input-group-text " id="addon-wrapping">%</span>
-                                        <input type="number" class="form-control saving-amount" placeholder="Interest" aria-label="Username" aria-describedby="addon-wrapping">
-                                    </div>
-                                </div>
-                                <div class="row d-flex justify-content-between mt-4">
-                                    <div class="input-group flex-nowrap w-50">
-                                        <input class="form-control date-emi" type="date" placeholder="" aria-label="default input example">
-                                    </div>
-                                    <div class="input-group w-50 d-flex justify-content-between">
-                                        <input type="reset" class="btn-secondary" value="Cancel"> 
-                                        <input type="submit" class="btn-primary" value="Calculate">
-                                    </div>
-                                </div>
-                                <div class="row d-flex justify-content-between mt-4">
-                                    <div class="col-5">
-                                        <input class="form-control note" type="text" placeholder="Total Amount Will Be" aria-label="disabled input example" disabled>
-                                    </div>
-                                </div>
-                            </form>
-                        <!-- <h3>Home</h3>
-                        <p>Home is where the heart is..</p> -->
-                        </div>
-
-                    </div>
-                </div>
-            </div> 
+            </div>
         </div>
-
 
     </main>
 
