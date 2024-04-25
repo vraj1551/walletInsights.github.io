@@ -93,7 +93,7 @@ body{
   transition: 0.3s;
 }
 .note{
-    width: 400px !important;
+    width: 120% !important;
 }
 .input-group, .date{
     width: 40% !important;
@@ -103,15 +103,15 @@ body{
     font-size: 10px !important;
 }
 .category{
-    width: 400px !important;
+    width: 120% !important;
 }
 .payment-method{
-    width: 400px !important;
+    width: 120% !important;
 }
 
-.method{
+/* .method{
     width: 40% !important; 
-}
+} */
 
 .entry-form{
     background-color: red;
@@ -143,4 +143,17 @@ body{
     background-color: #ffff;
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.35);
     border-radius: 5px;
+}
+
+.heading-btn{
+    font-size: 20px;
+    margin-left: 0px;
+    padding-top: 16px;
+    width: 100% !important;
+}
+.saving-amount{
+    width: 120% !important;
+}
+.date-emi{
+    width: 100% !important;
 }
