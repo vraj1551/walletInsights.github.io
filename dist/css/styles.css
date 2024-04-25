@@ -36,14 +36,14 @@ body{
     font-family: "Roboto", sans-serif;
     font-weight: 400 !important;
     font-size: 28px;
-    color: #3f51b5 !important;
+    color: #0f2b49 !important;
 }
 .hero-balance span{
     padding-left: 30px;
     font-family: "Roboto", sans-serif;
     font-weight: 300 !important;
     font-size: 28px;
-    color: #3f51b5 !important;
+    color: #0f2b49 !important;
 }
 .add-transaction{
     background-color: #ffff;
@@ -115,7 +115,9 @@ body{
 /* .method{
     width: 40% !important; 
 } */
-
+.calculator{
+    border: none;
+}
 .entry-form{
     background-color: red;
     display: flex;
@@ -129,16 +131,16 @@ body{
 }
 
 .btn-primary{
-    background-color: #3f51b5;
+    background-color: #0f2b49;
     color: #ffff;
-    border: 1px solid #3f51b5;
+    border: 1px solid #0f2b49;
     border-radius: 5px 5px;
     width: 40%;
 }
 .btn-secondary{
     background-color: #fff !important;
-    color: #3f51b5;
-    border: 2px solid #3f51b5 !important;
+    color: #0f2b49;
+    border: 2px solid #0f2b49 !important;
     border-radius: 5px;
     width: 40%;
 }
@@ -170,7 +172,7 @@ body{
 
 .summary-main-heading{
     font-family: "Roboto", sans-serif;
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 500;
 }
 .transaction-heading{
@@ -200,19 +202,19 @@ body{
 
 .summary-data p{
     font-family: "Roboto", sans-serif;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 400;
     margin-top: 0px;
 }
 .summary-data-red{
     font-family: "Roboto", sans-serif;
     color: red;
-    font-size: 18px;
+    font-size: 17px;
 }
 .summary-data-green{
     font-family: "Roboto", sans-serif;
     color: green;
-    font-size: 18px;
+    font-size: 17px;
 }
 .summary-data-black{
     font-family: "Roboto", sans-serif;
@@ -222,4 +224,78 @@ body{
 .light-hr{
     color: black;
     margin-top: 0px;
+}
+
+/* Sign up details */
+
+.signup-details{
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 400px;
+    max-width: 100%;
+    min-height: 480px;
+}
+.signup-details p{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+
+.signup-details span{
+    font-size: 12px;
+}
+
+.signup-details a{
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+
+.signup-details button{
+    background-color: #0f2b49;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.signup-details button.hidden{
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.signup-details form{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.signup-details input{
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+.transactions-table th{
+    font-family: "Roboto", sans-serif;
+    background-color: red !important;
 }

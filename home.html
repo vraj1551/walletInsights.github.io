@@ -189,7 +189,7 @@
                     <div class="mt-4 add-transaction col-12">
                         <div class="d-flex col-12 justify-content-start">
                             <div class="mb-2 ms-2">
-                                <button class="tablink tablink-saving heading-btn" onclick="openPage('Saving', this, '')"><i class="fa-solid fa-caret-down me-1"></i> Saving Calculator</button>
+                                <button class="tablink tablink-saving heading-btn calculator" onclick="openPage('Saving', this, '')"><i class="fa-solid fa-caret-down me-1"></i> Saving Calculator</button>
                             </div>
                         </div>
                         <div class="tabbing">
@@ -226,7 +226,7 @@
                     <div class="mt-4 add-transaction col-12">
                         <div class="d-flex col-12 justify-content-start">
                             <div class="mb-2 ms-2">
-                                <button class="tablink tablink-saving heading-btn" onclick="openPage('Emi', this, '')"><i class="fa-solid fa-caret-down me-1"></i> EMI Calculator</button>
+                                <button class="tablink tablink-saving heading-btn calculator" onclick="openPage('Emi', this, '')"><i class="fa-solid fa-caret-down me-1"></i> EMI Calculator</button>
                             </div>
                         </div>
                         <div class="tabbing">
@@ -297,13 +297,13 @@
                             <p>Rs. 80</p>
                         </div>
                         <div class="transactions-seeMore d-flex justify-content-end me-4">
-                            <a href="" class="mb-3">See More</a>
+                            <a href="records.html" class="mb-3">See More</a>
                         </div>
                     </div>
                 </div>
 
                 
-                <div class="col-4 transactions mt-4">
+                <div class="col-4 transactions mt-4 mb-5">
                     <div class="summary mt-3 ms-4">
                         <span class="summary-main-heading">Expense Summary</span>
                         <div class="summary-data d-flex justify-content-between me-3 mt-1">
@@ -324,7 +324,7 @@
                             <span class="summary-data-black">Rs. 23000</span>
                         </div>
                     </div>
-                    <div class="summary mt-3 ms-4">
+                    <div class="summary mt-3 ms-4 mb-2">
                         <span class="summary-main-heading">Income Summary</span>
                         <div class="summary-data d-flex justify-content-between me-3 mt-1">
                             <p>Cash used</p>
@@ -343,8 +343,38 @@
                             <p>Total</p>
                             <span class="summary-data-black">Rs. 23000</span>
                         </div>
-                        
                     </div>
+                    <div class="summary ms-4">
+                        <span class="summary-main-heading">You Owe Them</span>
+                        <div class="summary-data d-flex justify-content-between me-3 mt-1">
+                            <p>Vedant</p>
+                            <span class="summary-data-red">Rs. 7899</span>
+                        </div>
+                        <div class="summary-data d-flex justify-content-between me-3">
+                            <p>Vaidik</p>
+                            <span class="summary-data-red">Rs. 7899</span>
+                        </div>
+                        <div class="summary-data d-flex justify-content-between me-3">
+                            <p>Om</p>
+                            <span class="summary-data-red">Rs. 7899</span>
+                        </div>
+                    </div>
+                    <div class="summary mt-3 ms-4">
+                        <span class="summary-main-heading">They Owe you</span>
+                        <div class="summary-data d-flex justify-content-between me-3 mt-1">
+                            <p>Vedant</p>
+                            <span class="summary-data-green">Rs. 7899</span>
+                        </div>
+                        <div class="summary-data d-flex justify-content-between me-3">
+                            <p>Vaidik</p>
+                            <span class="summary-data-green">Rs. 7899</span>
+                        </div>
+                        <div class="summary-data d-flex justify-content-between me-3">
+                            <p>Om</p>
+                            <span class="summary-data-green">Rs. 7899</span>
+                        </div>
+                    </div>
+                    
                     <!-- <div class="mt-3 ms-4">
                         <span class="summary-main-heading">Recent Transactions</span>
                         <div class="mt-3 transaction-green d-flex justify-content-between me-3">
